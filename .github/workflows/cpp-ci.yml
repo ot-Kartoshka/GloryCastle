@@ -13,7 +13,7 @@ jobs:
         run: sudo apt update && sudo apt install g++
 
       - name: Compile the code
-        run: g++ main.cpp -o main
+        run: g++ LAB.cpp -o LAB
 
       - name: Compile tests
         run: g++ test.cpp -o test
