@@ -1,13 +1,16 @@
 ﻿#include <iostream>
+#include "LAB.h"
+
 using namespace std;
 
-int add(int a, int b) {
-    return a + b;
+int main(){
+	int a;
+	int b;
+	cin >> a >> b;
+	if (a > b) {
+		cout << subtract(a, b) << endl;
+	}
+	else {
+		cout << add(a, b) << endl;
+	};
 }
-
-int main() {
-    cout << "Hello, world!" << endl;
-    cout << "2 + 3 = " << add(2, 3) << endl;
-    return 0;
-}
-

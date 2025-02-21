@@ -1,21 +1,31 @@
 #include <iostream>
 #include <cassert>
+#include "LAB.h"
+
 using namespace std;
 
-// Функція, яку ми тестуємо
-int add(int a, int b) {
-    return a + b;
+void test_add() {
+    assert(add(2, 3) == 5);
+    assert(add(-1, -1) == -2);
+    cout << "test_add PASSED" << endl;
 }
 
-// Тестова функція
-void test_add() {
-    assert(add(2, 3) == 5);  // Перевіряємо, чи 2 + 3 = 5
-    assert(add(-1, 1) == 0); // Перевіряємо, чи -1 + 1 = 0
-    assert(add(0, 0) == 0);  // Перевіряємо, чи 0 + 0 = 0
-    cout << "All tests passed!" << endl;
+void test_subtract() {
+    assert(subtract(5, 3) == 2);
+    assert(subtract(10, 20) == -10);
+    cout << "test_subtract PASSED" << endl;
+}
+
+void test_multiply() {
+    assert(multiply(2, 3) == 6);
+    assert(multiply(-4, -5) == 20);
+    cout << "test_multiply PASSED" << endl;
 }
 
 int main() {
-    test_add(); // Запускаємо тести 
+    test_add();
+    test_subtract();
+    test_multiply();
+    cout << "All tests PASSED!" << endl;
     return 0;
 }
